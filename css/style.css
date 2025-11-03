@@ -13,6 +13,19 @@ h1 {
   color: #ff6600;
 }
 
+.main-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.main-image img {
+  max-width: 100%;
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.4);
+}
+
 .tracks {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -72,3 +85,4 @@ h1 {
     max-width: 100%;
   }
 }
+
