@@ -21,11 +21,10 @@ h1 {
 
 .main-image img {
   width: 250px; /* 固定幅にする */
-  max-width: noen;
+  max-width: none;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.5);
 }
-
 
 .tracks {
   display: grid;
@@ -43,6 +42,7 @@ h1 {
   align-items: center;
   padding: 15px;
   transition: transform 0.2s;
+  position: relative;
 }
 
 .track-card:hover {
@@ -87,6 +87,27 @@ h1 {
   }
 }
 
+/* ======================== */
+/*  Coming Soon 機能 ここから */
+/* ======================== */
 
+.coming-soon {
+  opacity: 0.4;
+  pointer-events: none; /* 全クリック無効化 */
+}
 
-
+.coming-soon::after {
+  content: "COMING SOON";
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 102, 0, 0.9);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.1rem;
+  text-align: center;
+  white-space: nowrap;
+}
